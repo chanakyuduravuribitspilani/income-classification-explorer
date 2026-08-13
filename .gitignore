@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local build helper (notebook is generated from this)
+build_notebook.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Course materials — not part of the submission repo
+Sessions/
+ML_Assignment_2.pdf
+
+# Keep: models/, test_data.csv, data/adult.csv, results/ (needed by the app)
