@@ -73,8 +73,7 @@ the held-out test set (6,513 rows).
 
 The deployed app lets a user explore the trained models interactively.
 
-> **Live app:** `https://<your-app-name>.streamlit.app`
-> *(replace with your actual Streamlit Community Cloud link before submission)*
+> **Live app:** https://chanakyuduravuribitspilani-income-classification-exp-app-bncdbu.streamlit.app/
 
 **Features implemented:**
 - 📁 **Test-data CSV upload** (or use the bundled `test_data.csv`).
