@@ -65,8 +65,8 @@ the held-out test set (6,513 rows).
 | Decision Tree | Competitive accuracy and the best recall among the tree/linear models, but a single tree is prone to variance; its AUC is the lowest of the strong models, hinting at slight overfitting. |
 | kNN | Decent overall, yet the weakest of the "good" models. Distance-based voting struggles a little with the high-dimensional one-hot encoded space, lowering both recall and MCC. |
 | Naive Bayes | Clear outlier. Its Gaussian independence assumption is violated by the one-hot categorical features, so it over-predicts `>50K` — huge recall (0.95) but poor precision (0.34) and the lowest accuracy and MCC. |
-| Random Forest (Ensemble) | Best model overall — top Accuracy, AUC, Precision and MCC. Averaging many de-correlated trees controls the variance seen in the single Decision Tree and gives the most balanced, trustworthy predictions. |
-| **Overall Winner** | **Random Forest (Ensemble)** — highest Accuracy (0.867), AUC (0.920) and MCC (0.613). |
+| Random Forest (Ensemble) | Best model overall — tops five of the six metrics (Accuracy, AUC, Precision, F1 and MCC); only Recall goes to Naive Bayes. Averaging many de-correlated trees controls the variance seen in the single Decision Tree and gives the most balanced, trustworthy predictions. |
+| **Overall Winner** | **Random Forest (Ensemble)** — best in five of six metrics: Accuracy (0.867), AUC (0.920), Precision (0.797), F1 (0.686) and MCC (0.613); only Recall goes to Naive Bayes. |
 
 ## e. Streamlit web application
 
