@@ -5,8 +5,8 @@ __pycache__/
 .venv/
 venv/
 
-# Local build helper (notebook is generated from this)
-build_notebook.py
+# Local build helper (notebooks are generated from this)
+build_model_notebooks.py
 
 # OS
 .DS_Store
@@ -16,4 +16,4 @@ Thumbs.db
 Sessions/
 ML_Assignment_2.pdf
 
-# Keep: models/, test_data.csv, data/adult.csv, results/ (needed by the app)
+# Keep: model/saved_models/, model/metrics/, test_data.csv, raw_adult_income.csv (needed by the app)

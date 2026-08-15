@@ -88,22 +88,27 @@ The deployed app lets a user explore the trained models interactively.
 
 ```
 .
-├── app.py                 # Streamlit web application
-├── model_training.ipynb   # EDA, preprocessing, training & evaluation
-├── requirements.txt       # Python dependencies
-├── test_data.csv          # Held-out test data for the app
-├── data/
-│   └── adult.csv          # Full dataset (downloaded from UCI)
-├── models/                # Saved scikit-learn pipelines (.pkl)
-└── results/
-    └── metrics.csv        # Exported comparison metrics
+├── app.py                       # Streamlit web application
+├── requirements.txt             # Python dependencies (pinned)
+├── raw_adult_income.csv         # Full raw dataset (from UCI)
+├── test_data.csv                # Held-out test data for the app
+├── README.md
+└── model/
+    ├── data_prep.py             # Shared loading, preprocessing & train/test split
+    ├── logistic_regression.ipynb
+    ├── decision_tree.ipynb
+    ├── knn.ipynb
+    ├── naive_bayes.ipynb
+    ├── random_forest.ipynb
+    ├── saved_models/            # One trained pipeline per model (.pkl)
+    └── metrics/                 # One metrics file per model (.json)
 ```
 
 ## ▶️ Run locally
 
 ```bash
 pip install -r requirements.txt
-# (optional) retrain everything:  jupyter notebook model_training.ipynb
+# (optional) retrain a model: open any notebook in model/ and run all cells
 streamlit run app.py
 ```
 

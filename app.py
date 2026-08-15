@@ -21,7 +21,7 @@ from sklearn.metrics import (accuracy_score, roc_auc_score, precision_score,
 # --------------------------------------------------------------------------- #
 # Configuration
 # --------------------------------------------------------------------------- #
-MODELS_DIR = Path("models")
+SAVED_MODELS_DIR = Path("model") / "saved_models"
 TARGET_COLUMN = "income"
 POSITIVE_LABEL = ">50K"
 
@@ -42,7 +42,7 @@ st.set_page_config(page_title="Income Classification Explorer",
 # --------------------------------------------------------------------------- #
 @st.cache_resource(show_spinner=False)
 def load_pipeline(file_name: str):
-    return joblib.load(MODELS_DIR / file_name)
+    return joblib.load(SAVED_MODELS_DIR / file_name)
 
 
 def encode_target(series: pd.Series) -> np.ndarray:
@@ -136,18 +136,19 @@ with right:
     st.dataframe(pd.DataFrame(report).transpose().round(3), use_container_width=True)
 
 # --------------------------------------------------------------------------- #
-# All-models comparison
+# All-models comparison (shown directly, no button)
 # --------------------------------------------------------------------------- #
-st.subheader("🏆 Compare all models on this test set")
+st.subheader("🏆 Comparison of all five models on this test set")
 
-if st.button("Run comparison across all 5 models"):
-    rows = []
-    for name, file_name in MODEL_CATALOG.items():
-        rows.append({"ML Model Name": name,
-                     **score_model(load_pipeline(file_name), X_test, y_test)})
-    board = pd.DataFrame(rows).set_index("ML Model Name").round(4)
-    st.dataframe(board.style.background_gradient(cmap="Greens"),
-                 use_container_width=True)
-    st.success(f"Overall winner by F1 score: **{board['F1'].idxmax()}**")
+rows = [{"ML Model Name": name, **score_model(load_pipeline(file_name), X_test, y_test)}
+        for name, file_name in MODEL_CATALOG.items()]
+board = pd.DataFrame(rows).set_index("ML Model Name").round(4)
 
-st.caption("Built for ML Assignment 2 · models trained in model_training.ipynb")
+# Simple, clear styling: highlight the best value in each metric column in light green
+styled = board.style.format("{:.4f}").highlight_max(axis=0, color="#b7e4c7")
+st.dataframe(styled, use_container_width=True)
+
+winner = board["F1"].idxmax()
+st.success(f"Overall winner by F1 score: **{winner}**")
+
+st.caption("Built for ML Assignment 2 · models trained in the model/ notebooks")
