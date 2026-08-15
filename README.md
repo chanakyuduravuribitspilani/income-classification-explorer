@@ -36,8 +36,7 @@ features are one-hot encoded inside each model pipeline.
 
 ## c. GitHub repository link
 
-> **Repository:** `https://github.com/chanakyuduravuribitspilani/income-classification-explorer`
-> *(confirm this matches your actual repository link before submission)*
+> **Repository:** https://github.com/chanakyuduravuribitspilani/income-classification-explorer
 
 The repository contains the complete source code, `requirements.txt`, this `README.md`,
 the trained model pipelines, and the test data CSV.
