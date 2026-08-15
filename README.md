@@ -79,8 +79,9 @@ The deployed app lets a user explore the trained models interactively.
 - 📁 **Test-data CSV upload** (or use the bundled `test_data.csv`).
 - 🔽 **Model selection dropdown** for all five models.
 - 📊 **Live display of all six evaluation metrics**.
-- 🔵 **Confusion matrix and full classification report**, plus a one-click table that
-  scores every model on the uploaded test set.
+- 🔵 **Confusion matrix and full classification report**, plus an always-visible
+  comparison table that scores every model on the loaded test set and highlights the
+  best value for each metric.
 
 ---
 
