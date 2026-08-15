@@ -1,4 +1,4 @@
-# 💼 Income Classification Explorer — ML Assignment 2
+# Income Classification Explorer — ML Assignment 2
 
 An end-to-end machine learning project that predicts whether a person's annual income
 exceeds \$50K, using the UCI *Adult (Census Income)* dataset. I train five classification
@@ -75,16 +75,16 @@ The deployed app lets a user explore the trained models interactively.
 > **Live app:** https://chanakyuduravuribitspilani-income-classification-exp-app-bncdbu.streamlit.app/
 
 **Features implemented:**
-- 📁 **Test-data CSV upload** (or use the bundled `test_data.csv`).
-- 🔽 **Model selection dropdown** for all five models.
-- 📊 **Live display of all six evaluation metrics**.
-- 🔵 **Confusion matrix and full classification report**, plus an always-visible
+- **Test-data CSV upload** (or use the bundled `test_data.csv`).
+- **Model selection dropdown** for all five models.
+- **Live display of all six evaluation metrics**.
+- **Confusion matrix and full classification report**, plus an always-visible
   comparison table that scores every model on the loaded test set and highlights the
   best value for each metric.
 
 ---
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```
 .
@@ -104,7 +104,7 @@ The deployed app lets a user explore the trained models interactively.
 └── metrics/                     # One metrics file per model (.csv)
 ```
 
-## ▶️ Run locally
+## Run locally
 
 ```bash
 pip install -r requirements.txt
@@ -112,7 +112,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 🚀 Deploy on Streamlit Community Cloud
+## Deploy on Streamlit Community Cloud
 
 1. Push this repository to GitHub.
 2. Go to https://streamlit.io/cloud and sign in with GitHub.
