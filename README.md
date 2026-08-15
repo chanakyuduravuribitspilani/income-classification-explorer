@@ -101,7 +101,7 @@ The deployed app lets a user explore the trained models interactively.
     ├── naive_bayes.ipynb
     ├── random_forest.ipynb
     ├── saved_models/            # One trained pipeline per model (.pkl)
-    └── metrics/                 # One metrics file per model (.json)
+    └── metrics/                 # One metrics file per model (.csv)
 ```
 
 ## ▶️ Run locally
