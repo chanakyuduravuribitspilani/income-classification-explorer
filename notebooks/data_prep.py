@@ -17,12 +17,12 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 # --- Paths (resolved relative to this file, so notebooks can run from anywhere) ---
-MODEL_DIR = Path(__file__).resolve().parent
-REPO_ROOT = MODEL_DIR.parent
+NOTEBOOKS_DIR = Path(__file__).resolve().parent
+REPO_ROOT = NOTEBOOKS_DIR.parent
 RAW_PATH = REPO_ROOT / "raw_adult_income.csv"
 TEST_CSV_PATH = REPO_ROOT / "test_data.csv"
-SAVED_MODELS_DIR = MODEL_DIR / "saved_models"
-METRICS_DIR = MODEL_DIR / "metrics"
+SAVED_MODELS_DIR = REPO_ROOT / "saved_models"
+METRICS_DIR = REPO_ROOT / "metrics"
 
 RANDOM_SEED = 42
 POSITIVE_LABEL = ">50K"

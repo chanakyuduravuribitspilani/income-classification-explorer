@@ -16,4 +16,4 @@ Thumbs.db
 Sessions/
 ML_Assignment_2.pdf
 
-# Keep: model/saved_models/, model/metrics/, test_data.csv, raw_adult_income.csv (needed by the app)
+# Keep: saved_models/, metrics/, test_data.csv, raw_adult_income.csv (needed by the app)

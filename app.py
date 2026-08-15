@@ -21,7 +21,7 @@ from sklearn.metrics import (accuracy_score, roc_auc_score, precision_score,
 # --------------------------------------------------------------------------- #
 # Configuration
 # --------------------------------------------------------------------------- #
-SAVED_MODELS_DIR = Path("model") / "saved_models"
+SAVED_MODELS_DIR = Path("saved_models")
 TARGET_COLUMN = "income"
 POSITIVE_LABEL = ">50K"
 

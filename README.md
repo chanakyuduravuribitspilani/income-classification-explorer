@@ -93,22 +93,22 @@ The deployed app lets a user explore the trained models interactively.
 ├── raw_adult_income.csv         # Full raw dataset (from UCI)
 ├── test_data.csv                # Held-out test data for the app
 ├── README.md
-└── model/
-    ├── data_prep.py             # Shared loading, preprocessing & train/test split
-    ├── logistic_regression.ipynb
-    ├── decision_tree.ipynb
-    ├── knn.ipynb
-    ├── naive_bayes.ipynb
-    ├── random_forest.ipynb
-    ├── saved_models/            # One trained pipeline per model (.pkl)
-    └── metrics/                 # One metrics file per model (.csv)
+├── notebooks/
+│   ├── data_prep.py             # Shared loading, preprocessing & train/test split
+│   ├── logistic_regression.ipynb
+│   ├── decision_tree.ipynb
+│   ├── knn.ipynb
+│   ├── naive_bayes.ipynb
+│   └── random_forest.ipynb
+├── saved_models/                # One trained pipeline per model (.pkl)
+└── metrics/                     # One metrics file per model (.csv)
 ```
 
 ## ▶️ Run locally
 
 ```bash
 pip install -r requirements.txt
-# (optional) retrain a model: open any notebook in model/ and run all cells
+# (optional) retrain a model: open any notebook in notebooks/ and run all cells
 streamlit run app.py
 ```
 
