@@ -144,11 +144,13 @@ rows = [{"ML Model Name": name, **score_model(load_pipeline(file_name), X_test, 
         for name, file_name in MODEL_CATALOG.items()]
 board = pd.DataFrame(rows).set_index("ML Model Name").round(4)
 
-# Simple, clear styling: highlight the best value in each metric column in light green
-styled = board.style.format("{:.4f}").highlight_max(axis=0, color="#b7e4c7")
+# Simple, clear styling: highlight the best value in each metric column with a
+# high-contrast deep-green fill and bold white text (readable on the dark theme)
+styled = board.style.format("{:.4f}").highlight_max(
+    axis=0, props="background-color:#1b5e20; color:white; font-weight:bold;")
 st.dataframe(styled, use_container_width=True)
 
 winner = board["F1"].idxmax()
 st.success(f"Overall winner by F1 score: **{winner}**")
 
-st.caption("Built for ML Assignment 2 · models trained in the model/ notebooks")
+st.caption("Built for ML Assignment 2 · models trained in the notebooks/ folder")
